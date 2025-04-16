@@ -1,38 +1,46 @@
-# Local .terraform directories
-**/.terraform/*
-
-# .tfstate files
+# Archivos de estado de Terraform
 *.tfstate
 *.tfstate.*
+.terraform/
+.terraform.lock.hcl
 
-# Crash log files
-crash.log
-crash.*.log
+# Planes de Terraform
+*.tfplan
 
-# Exclude all .tfvars files, which are likely to contain sensitive data, such as
-# password, private keys, and other secrets. These should not be part of version 
-# control as they are data points which are potentially sensitive and subject 
-# to change depending on the environment.
+# Archivos de variables (excepto example.tfvars)
 *.tfvars
-*.tfvars.json
 !example.tfvars
 
-# Ignore override files as they are usually used to override resources locally and so
-# are not checked in
+# Archivos de respaldo
+*.backup
+
+# Archivos de configuración locales
+.terraformrc
+terraform.rc
+
+# Archivos de credenciales
+*.pem
+*.key
+*.pub
+credentials.json
+*.pfx
+*_credentials*
+*credentials*
+*id_rsa*
+*.keystore
+
+# Archivos de log
+*.log
+
+# Directorios e información local específica del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de override de Terraform
 override.tf
 override.tf.json
 *_override.tf
 *_override.tf.json
 
-# Ignore transient lock info files created by terraform apply
-.terraform.tfstate.lock.info
-
-# Include override files you do wish to add to version control using negated pattern
-# !example_override.tf
-
-# Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
-# example: *tfplan*
-
-# Ignore CLI configuration files
-.terraformrc
-terraform.rc
+# Archivos de configuración de providers locales
+**/.terraform.d/
