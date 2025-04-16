@@ -44,3 +44,5 @@ override.tf.json
 
 # Archivos de configuración de providers locales
 **/.terraform.d/
+
+*.vscode
